@@ -29,13 +29,9 @@ function renderItems(collection) {
     
     if (item.albumSingle == "Album") { 
         listItem.classList.add('Album') 
-    }
-
-    if (item.albumSingle == "Single") { 
+    } else if (item.albumSingle == "Single") { 
         listItem.classList.add('Single') 
-    }
-
-    if (item.albumSingle == "EP") {
+    } else if (item.albumSingle == "EP") {
         listItem.classList.add('EP') 
     }
     
