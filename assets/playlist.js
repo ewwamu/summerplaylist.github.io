@@ -1,6 +1,9 @@
 //i published to github but the json on longer works//
 
 function renderItems(collection) {
+
+    const collectionList = document.querySelector('.collection') 
+
     console.log("data records in JSON", collection);
     collection.forEach(function(item){
         console.log(item.title);
@@ -35,17 +38,15 @@ function renderItems(collection) {
         listItem.classList.add('EP') 
     }
     
-    var collectionList = document.querySelector('.collection') 
-
     collectionList.appendChild(listItem)
 })
 
 }
 
 fetch('assets/summerplaylist.json')
-.then(function (response) {
-    return response.json();
-})
-.then(function (collection) {
-    renderItems(collection.reverse());
-});
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (collection) {
+        renderItems(collection.reverse());
+    });
