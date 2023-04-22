@@ -46,7 +46,7 @@ function renderItems(collection) {
 
 }
 
-fetch('./assets/playlist.json')
+fetch('./playlist.json')
 .then(function (response) {
     return response.json();
 })
